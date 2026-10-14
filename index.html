@@ -1,14 +1,69 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Instituto Nexo</title>
-</head>
-<body style="font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:90vh;margin:0;padding:16px;text-align:center">
-<main>
-<h1>Instituto Nexo</h1>
-<p>Em construção.</p>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexo Aberto — tecnologia aberta para a saúde pública</title>
+<meta name="description" content="Ferramentas open source para integrar dados e tornar a saúde pública mais eficiente. Projeto independente, sem fins lucrativos, sem vínculo oficial com o governo.">
+<style>
+:root{--ink:#0F2A3D;--tx:#27384A;--mut:#5F7285;--ac:#0B7A75;--ac2:#E8F5F3;--ln:#D8E3E8;--warn:#B45309}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;color:var(--tx);background:#fff}
+.w{max-width:960px;margin:0 auto;padding:0 18px}header{border-bottom:1px solid var(--ln)}
+header .w{display:flex;justify-content:space-between;align-items:center;padding:14px 18px}
+.logo{font-weight:800;color:var(--ink);font-size:20px;letter-spacing:-.02em}.logo i{color:var(--ac);font-style:normal}
+nav a{margin-left:16px;color:var(--tx);text-decoration:none;font-size:14px}
+.hero{padding:44px 0 24px}.hero h1{font-size:clamp(28px,5vw,42px);line-height:1.15;color:var(--ink);margin:0 0 12px}
+.hero p{font-size:18px;color:var(--mut);max-width:680px}
+.aviso{background:#FFF7ED;border:1px solid #FED7AA;color:var(--warn);padding:10px 14px;border-radius:10px;font-size:13.5px;margin:18px 0}
+h2{color:var(--ink);font-size:24px;margin:40px 0 12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.k{border:1px solid var(--ln);border-radius:14px;padding:14px;background:var(--ac2)}.k b{display:block;font-size:30px;color:var(--ink)}.k span{font-size:13px;color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}th,td{border-bottom:1px solid var(--ln);padding:8px;text-align:left;vertical-align:top}th{color:var(--mut);font-weight:600}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:99px;background:#EEF2F5;color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}.c{border:1px solid var(--ln);border-radius:14px;padding:16px}.c h3{margin:0 0 6px;color:var(--ink);font-size:17px}
+footer{margin-top:50px;border-top:1px solid var(--ln);padding:20px 0 40px;font-size:13px;color:var(--mut)}
+@media(max-width:600px){nav{display:none}}
+</style></head><body>
+<header><div class="w"><div class="logo">Nexo<i>.</i>Aberto</div><nav><a href="#painel">Painel</a><a href="#projetos">Projetos</a><a href="#como">Como funciona</a><a href="#contribuir">Contribuir</a></nav></div></header>
+<main class="w">
+<section class="hero">
+<h1>Tecnologia aberta para uma saúde pública mais eficiente</h1>
+<p>Os sistemas de saúde do país existem, mas muitas vezes não conversam entre si. Construímos ferramentas <b>open source</b> que ligam, validam e analisam dados, para que cada município não precise reinventar o mesmo processo.</p>
+<div class="aviso">Projeto independente e sem fins lucrativos. <b>Não temos vínculo oficial com o Ministério da Saúde, o SUS ou qualquer prefeitura.</b> Nenhuma ferramenta usa dados pessoais de pacientes.</div>
+</section>
+
+<section id="painel"><h2>Painel de impacto</h2>
+<div class="kpis" id="kpis"></div>
+<p style="font-size:13px;color:var(--mut)" id="nota"></p></section>
+
+<section id="projetos"><h2>Projetos</h2>
+<table><thead><tr><th>Projeto</th><th>Situação</th><th>Economia potencial</th><th>Economia medida</th></tr></thead><tbody id="proj"></tbody></table></section>
+
+<section id="como"><h2>Como funciona</h2>
+<div class="grid">
+<div class="c"><h3>1. Achar a tarefa repetida</h3><p>Escolhemos processos que muitos municípios executam do mesmo jeito, com dados públicos ou anonimizáveis.</p></div>
+<div class="c"><h3>2. Construir por cima do que existe</h3><p>Não substituímos os sistemas atuais. Criamos conectores, painéis e validadores abertos.</p></div>
+<div class="c"><h3>3. Medir de verdade</h3><p>Só chamamos de economia o que for medido e documentado. Estimativas aparecem separadas, como <i>potencial</i>.</p></div>
+<div class="c"><h3>4. Compartilhar</h3><p>Todo o código e a metodologia são públicos. Quem usa melhora e devolve.</p></div>
+</div></section>
+
+<section><h2>Como medimos a economia</h2>
+<table><tr><th>Nível</th><th>O que significa</th></tr>
+<tr><td>Hipótese</td><td>Ideia sem dado local. Não entra em nenhum total.</td></tr>
+<tr><td>Potencial</td><td>Estimativa com fonte pública e premissas escritas. Aparece à parte.</td></tr>
+<tr><td>Medida</td><td>Antes e depois num município real, com a unidade de medida e o método descritos (horas poupadas, retrabalho evitado, exames não repetidos).</td></tr></table></section>
+
+<section id="contribuir"><h2>Como contribuir</h2>
+<p>Desenvolvedores, profissionais de saúde, gestores e agentes de IA autônomos são bem-vindos. Abra uma proposta descrevendo o processo, quem o repete e como medir o ganho. O código será publicado sob licença livre (AGPL-3.0 ou Apache-2.0, em definição).</p></section>
+
+<section><h2>Princípios</h2>
+<ul><li><b>Privacidade primeiro:</b> sem dados pessoais de pacientes; seguimos a LGPD.</li><li><b>Transparência:</b> números com fonte e método.</li><li><b>Gratuito:</b> não vendemos nada.</li></ul></section>
 </main>
-</body>
-</html>
+<footer><div class="w">Nexo Aberto — nome provisório. Site em construção; os números do painel começam em zero porque nenhum projeto foi medido ainda.</div></footer>
+<script>
+var DADOS={atualizado:"2026-10-13",
+ kpis:[{n:"Projetos ativos",v:0},{n:"Municípios usando",v:0},{n:"Usuários",v:0},{n:"Economia medida (R$)",v:"R$ 0"},{n:"Economia potencial (R$)",v:"a estimar"}],
+ projetos:[
+  {nome:"Explicador da fila de regulação (cidadão)",sit:"Em estudo",pot:"a estimar",med:"—"},
+  {nome:"Mapa de tarefas repetidas pelos municípios",sit:"Em pesquisa",pot:"—",med:"—"}]};
+document.getElementById('kpis').innerHTML=DADOS.kpis.map(function(k){return '<div class="k"><b>'+k.v+'</b><span>'+k.n+'</span></div>'}).join('');
+document.getElementById('proj').innerHTML=DADOS.projetos.map(function(p){return '<tr><td>'+p.nome+'</td><td><span class="tag">'+p.sit+'</span></td><td>'+p.pot+'</td><td>'+p.med+'</td></tr>'}).join('');
+document.getElementById('nota').textContent='Atualizado em '+DADOS.atualizado.split('-').reverse().join('/')+'. Valores só entram como "medidos" com método e fonte documentados.';
+</script></body></html>
